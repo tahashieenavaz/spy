@@ -156,3 +156,10 @@ input {
 #game .grow button[disabled] {
   opacity: 0.5;
 }
+
+.timer {
+  color: #222;
+  grid-column: span 2;
+  font-size: 5rem;
+  text-align: center;
+}
