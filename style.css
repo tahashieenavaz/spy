@@ -103,7 +103,7 @@ img {
 :is(#game, #settings) nav h1 {
   font-size: 2rem;
 }
-:is(#game, #settings) nav svg {
+:is(#game, #settings) nav img {
   width: 50px;
 }
 :is(#game, #settings) nav button {
