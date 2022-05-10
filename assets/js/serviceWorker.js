@@ -1,13 +1,14 @@
-const version = 3220;
+const version = 44;
 const cacheSlug = 'spygame';
 const assets = [
   '/',
   '/index.html',
-  '/app.js',
-  '/logo.svg',
-  '/style.css',
-  '/eventListeners.js',
-  '/functions.js',
+  '/assets/images/menu.svg',
+  '/assets/images/logo.svg',
+  '/assets/css/style.css',
+  '/assets/js/app.js',
+  '/assets/js/eventListeners.js',
+  '/assets/js/functions.js',
   '/wordlist.json',
 ];
 
