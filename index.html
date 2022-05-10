@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scaalbe=no"
     />
-    <!-- <link rel="manifest" href="manifest.json" /> -->
+    <!-- <link rel="manifest" href="manifest.json?version=1" /> -->
     <link rel="stylesheet" href="style.css" />
     <title>Spy</title>
   </head>
@@ -19,7 +19,7 @@
         <h2>Divide & Rule</h2>
       </div>
       <div>
-        <button>Start</button>
+        <button onclick="showPage('settings')">Start</button>
       </div>
     </section>
     <section id="settings">
@@ -42,6 +42,19 @@
           </svg>
         </button>
       </nav>
+      <div class="grow center">
+        <div class="form-control">
+          <span>Number of Players</span>
+          <input type="number" />
+        </div>
+        <div class="form-control">
+          <span>Number of Spies</span>
+          <input type="number" />
+        </div>
+        <div>
+          <button>Fire up!</button>
+        </div>
+      </div>
     </section>
     <script src="app.js"></script>
   </body>

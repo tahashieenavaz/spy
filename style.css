@@ -1,3 +1,6 @@
+:root {
+  --blue: #00297a;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,26 +10,24 @@ html,
 body {
   overflow: hidden;
 }
-#home {
-  background: #00297a;
-}
+
 section {
   height: 100%;
   width: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  visibility: none;
+  visibility: hidden;
+  pointer-events: none;
   opacity: 0;
   transition: 300ms;
 }
 section.active {
   visibility: visible;
   opacity: 1;
+  pointer-events: all;
 }
-#settings {
-  background: red;
-}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -49,14 +50,16 @@ h1,
 h2 {
   text-align: center;
 }
-
 button {
   all: unset;
   box-sizing: border-box;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+#home button {
   background: #fff;
   color: #222;
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
   text-transform: uppercase;
   font-weight: bold;
   width: 50%;
@@ -67,4 +70,51 @@ button {
 
 img {
   width: 300px;
+}
+.grow {
+  flex: 1;
+}
+#home {
+  background: var(--blue);
+}
+#settings {
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+#settings nav {
+  background: var(--blue);
+  flex-basis: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.4rem;
+}
+#settings nav h1 {
+  font-size: 2rem;
+}
+#settings nav svg {
+  width: 50px;
+}
+#settings nav button {
+  transition: 100ms;
+  padding: 0;
+}
+#settings nav button:active {
+  background: rgba(255, 255, 255, 0.5);
+}
+input {
+  all: unset;
+  box-sizing: border-box;
+  background: #f1f1f1;
+  border-radius: 6px;
+  padding: 1.3ch 1.5ch;
+  color: #222;
+}
+.form-control span {
+  color: #222;
+  font-weight: 100;
+  font-size: 0.8rem;
+  display: block;
+  margin-block-end: 0.5rem;
 }

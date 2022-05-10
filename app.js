@@ -70,9 +70,15 @@ function type(variable, providedType = 'string', bool = false) {
  * opposite for the vice versa.
  */
 function hidePage(target) {
+  if (target === 'current') {
+    removeClass(`section.active`, 'active');
+    return true;
+  }
+
   if (removeClass(`#${target}.active`, 'active')) {
     return true;
   }
+
   return false;
 }
 
@@ -82,10 +88,14 @@ function hidePage(target) {
  * @returns {boolean} Returns false if page showing is not successful, and exact
  * opposite for the vice versa.
  */
-function showPage(target) {}
+function showPage(target) {
+  if (addClass(`section#${target}`, 'active')) {
+    return true;
+  }
+  return false;
+}
 
-function gotoPage(target) {
-  type(target, 'string');
-
-  $('section.active');
+function page(target) {
+  hidePage('current');
+  showPage(target);
 }
