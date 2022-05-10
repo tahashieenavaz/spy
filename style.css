@@ -56,6 +56,7 @@ button {
   border-radius: 6px;
   padding: 0.75rem 1rem;
   cursor: pointer;
+  text-align: center;
 }
 #home button {
   background: #fff;
@@ -77,31 +78,55 @@ img {
 #home {
   background: var(--blue);
 }
-#settings {
+#settings,
+#game {
   background: #fafafa;
   display: flex;
   flex-direction: column;
+  padding-top: 85px;
+  padding-bottom: 30px;
+  overflow-y: scroll;
 }
-#settings nav {
+:is(#game, #settings) nav {
+  z-index: 1000;
   background: var(--blue);
   flex-basis: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.4rem;
+  padding: 8px 1.4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
-#settings nav h1 {
+:is(#game, #settings) nav h1 {
   font-size: 2rem;
 }
-#settings nav svg {
+:is(#game, #settings) nav svg {
   width: 50px;
 }
-#settings nav button {
+:is(#game, #settings) nav button {
   transition: 100ms;
   padding: 0;
 }
-#settings nav button:active {
+:is(#game, #settings) nav button:active {
   background: rgba(255, 255, 255, 0.5);
+}
+#settings .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+#settings .buttons button {
+  width: 46%;
+  text-align: center;
+}
+#settings .buttons button.submit {
+  background: var(--blue);
+}
+#settings .buttons button.reset {
+  background: #ececec;
+  color: #222;
 }
 input {
   all: unset;
@@ -117,4 +142,17 @@ input {
   font-size: 0.8rem;
   display: block;
   margin-block-end: 0.5rem;
+}
+
+#game .grow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 1.4rem;
+}
+
+#game .grow button {
+  background: var(--blue);
+}
+#game .grow button[disabled] {
+  opacity: 0.5;
 }
