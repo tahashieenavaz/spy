@@ -1,5 +1,15 @@
+const version = 30;
 const cacheSlug = 'spygame';
-const assets = ['/', '/index.html', '/app.js', 'logo.svg', 'style.css'];
+const assets = [
+  '/',
+  '/index.html',
+  '/app.js',
+  '/logo.svg',
+  '/style.css',
+  '/eventListeners.js',
+  '/functions.js',
+  '/wordlist.json',
+];
 
 self.addEventListener('install', (ie) => {
   ie.waitUntil(
@@ -12,7 +22,7 @@ self.addEventListener('install', (ie) => {
 self.addEventListener('fetch', (fe) => {
   fe.respondWith(
     caches.match(fe.request).then((res) => {
-      return res || fetch(fetchEvent.request);
+      return res || fetch(fe.request);
     })
   );
 });

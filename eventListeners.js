@@ -1,4 +1,4 @@
-$('#settings .buttons .submit').onclick = () => {
+$('#settings .buttons .submit').onclick = async () => {
   const numberOfPlayers = Number($('#playerCount').value);
   const numberOfSpies = Number($('#spyCount').value);
 
@@ -11,6 +11,10 @@ $('#settings .buttons .submit').onclick = () => {
     // TODO: send a toast to notify
     return false;
   }
+
+  const response = await fetch('wordlist.json');
+  const allWords = shuffleArray(await response.json());
+  const theWord = allWords[~~(Math.random() * allWords.length)];
 
   const playerStack = shuffleArray([
     ...Array.from({ length: numberOfSpies }, () => true),
@@ -32,7 +36,7 @@ $('#settings .buttons .submit').onclick = () => {
         alert('You are an SPY!');
       } else {
         // Player is a regular player
-        alert('The Word');
+        alert(theWord);
       }
     };
     playerButtonsFragment.appendChild(playerButtonElement);

@@ -1,7 +1,7 @@
 {
   "name": "Spy Game",
   "short_name": "SpyGame",
-  "start_url": "index.html",
+  "start_url": "index.html?v=1",
   "display": "standalone",
   "orientation": "portrait-primary"
 }

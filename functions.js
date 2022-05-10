@@ -94,12 +94,24 @@ function page(target) {
   showPage(target);
 }
 
+/**
+ * Fisher–Yates shuffle algorithm, implementation in Javascript.
+ * @param {Array} originalArray
+ * @returns {Array} a shuffled array via Fisher–Yates algorithm.
+ */
 function shuffleArray(originalArray) {
-  let final = originalArray;
+  const { random } = Math;
+  let currentIndex = originalArray.length;
+  let randomIndex = null;
 
-  for (let i = 0; i < 10; i++) {
-    final = final.sort((a, b) => Math.random() - 0.5);
+  while (currentIndex > 0) {
+    randomIndex = ~~(random() * originalArray.length);
+    currentIndex--;
+    [originalArray[currentIndex], originalArray[randomIndex]] = [
+      originalArray[randomIndex],
+      originalArray[currentIndex],
+    ];
   }
 
-  return final;
+  return originalArray;
 }
