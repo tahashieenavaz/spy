@@ -9,7 +9,7 @@ The game players' are separated into two teams.
 
 Regular players should try to find spies with ambiguous question. And spies will constantly try to find the word regular players are making questions for.
 
-# Screenshots
+### Screenshots
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/homepage.jpeg" alt="Homepage" width="200"/>
