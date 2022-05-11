@@ -14,4 +14,4 @@ Regular players should try to find spies with ambiguous question. And spies will
 
 ![Cards Page](https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/cards.jpeg)
 ![Revealed Card](https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/revealed-card.jpeg)
-![Sidebar](https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/sidebar.jpeg)
+<img src="https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/sidebar.jpeg" alt="Sidebar" width="200"/>
