@@ -9,9 +9,10 @@ Regular players should try to find spies with ambiguous question. And spies will
 
 # Screenshots
 
-|                                                        Solarized dark                                                        |                                                            Solarized Ocean                                                            |
-| :--------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------: |
-| !<img src="https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/homepage.jpeg" alt="Homepage" width="200"/> | <img src="https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/settings-page.jpeg" alt="Settings Page" width="200"/> |
+<p float="left">
+    <img src="https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/homepage.jpeg" alt="Homepage" width="200"/>
+    <img src="https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/settings-page.jpeg" alt="Settings Page" width="200"/>
+</p>
 
 <img src="https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/cards.jpeg" alt="Cards Page" width="200"/>
 
