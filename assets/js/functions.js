@@ -126,19 +126,24 @@ function empty(target) {
   }
 }
 
+/**
+ * Used to close menu and change the menu icon on all navigations to default
+ * burger menu.
+ */
 function closeMenu() {
-  const menu = $('.left-menu');
   $$('nav img').forEach((navImage) => {
     navImage.src = '/assets/images/menu.svg';
   });
-  if (menu.classList.contains('open')) {
-    menu.classList.remove('open');
-  }
+  removeClass('.left-menu', 'open');
 }
-
+/**
+ * Use to open right modal and change associated icon in all navbars
+ * to X.
+ */
 function openMenu() {
-  const menu = $('.left-menu');
-  if (!menu.classList.contains('open')) {
-    menu.classList.add('open');
-  }
+  $$('nav img').forEach((navImage) => {
+    navImage.src = '/assets/images/x.svg';
+  });
+
+  addClass('.left-menu', 'open');
 }
