@@ -9,7 +9,7 @@ Regular players should try to find spies with ambiguous question. And spies will
 
 # Screenshots
 
-<p>
+<p align="center">
     <img src="https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/homepage.jpeg" alt="Homepage" width="200"/>
     <img src="https://raw.githubusercontent.com/tahashieenavaz/spy/main/screenshots/settings-page.jpeg" alt="Settings Page" width="200"/>
 </p>
