@@ -49,7 +49,7 @@ $('#settings .buttons .submit').onclick = async () => {
         timerElement.classList.add('timer');
         gameContentElement.appendChild(timerElement);
 
-        const distance = 1 * 60000;
+        const distance = 5 * 60000;
         const future = new Date(new Date().getTime() + distance);
 
         timerInterval = setInterval(() => {
@@ -71,7 +71,6 @@ $('#settings .buttons .submit').onclick = async () => {
     playerButtonsFragment.appendChild(playerButtonElement);
   });
   gameContentElement.appendChild(playerButtonsFragment);
-
   page('game');
 };
 
