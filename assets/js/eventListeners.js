@@ -97,6 +97,7 @@ $$('nav button').forEach((navButton) => {
 
 $('#newgame').addEventListener('click', (e) => {
   e.preventDefault();
-  empty('#game');
+  empty('#game .grow');
+  closeMenu();
   page('settings');
 });

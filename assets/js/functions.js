@@ -125,3 +125,20 @@ function empty(target) {
     target.removeChild(target.firstChild);
   }
 }
+
+function closeMenu() {
+  const menu = $('.left-menu');
+  $$('nav img').forEach((navImage) => {
+    navImage.src = '/assets/images/menu.svg';
+  });
+  if (menu.classList.contains('open')) {
+    menu.classList.remove('open');
+  }
+}
+
+function openMenu() {
+  const menu = $('.left-menu');
+  if (!menu.classList.contains('open')) {
+    menu.classList.add('open');
+  }
+}
