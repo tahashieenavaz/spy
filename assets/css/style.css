@@ -62,6 +62,10 @@ button {
   cursor: pointer;
   text-align: center;
 }
+#home img {
+  pointer-events: none;
+  user-select: none;
+}
 #home button {
   background: #fff;
   color: #222;
