@@ -1,4 +1,4 @@
-const version = 2122231;
+const version = 21222321;
 const cacheSlug = 'spygame';
 const assets = [
   '/',
