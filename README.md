@@ -1,5 +1,7 @@
 # Spy!
 
+### Introduction
+
 Let me explain this game. Before anything else.
 Spy is a game introduced to me by @tahashieenavaz.
 The game players' are separated into two teams.
