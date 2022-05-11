@@ -34,7 +34,7 @@ $('#settings .buttons .submit').onclick = async () => {
       revealedCards++;
       playerButtonElement.textContent = 'Revaled';
       playerButtonElement.setAttribute('disabled', '');
-      if (playerStack) {
+      if (playerStack[index]) {
         // Player is an spy
         alert('You are an SPY!');
       } else {
