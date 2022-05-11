@@ -17,7 +17,7 @@ $('#settings .buttons .submit').onclick = async () => {
   const response = await fetch('wordlist.json');
   const allWords = shuffleArray(await response.json());
   const theWord = allWords[~~(Math.random() * allWords.length)];
-
+  info(allWords);
   const playerStack = shuffleArray([
     ...Array.from({ length: numberOfSpies }, () => true),
     ...Array.from({ length: numberOfPlayers - numberOfSpies }, () => false),
@@ -34,7 +34,7 @@ $('#settings .buttons .submit').onclick = async () => {
       revealedCards++;
       playerButtonElement.textContent = 'Revaled';
       playerButtonElement.setAttribute('disabled', '');
-      if (playerStack[index]) {
+      if (playerStack) {
         // Player is an spy
         alert('You are an SPY!');
       } else {

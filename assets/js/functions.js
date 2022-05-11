@@ -101,18 +101,19 @@ function page(target) {
  */
 function shuffleArray(originalArray) {
   const { random } = Math;
-  let currentIndex = originalArray.length;
-  let randomIndex = null;
+  for (let i = 0; i < 10; i++) {
+    let currentIndex = originalArray.length;
+    let randomIndex = null;
 
-  while (currentIndex > 0) {
-    randomIndex = ~~(random() * originalArray.length);
-    currentIndex--;
-    [originalArray[currentIndex], originalArray[randomIndex]] = [
-      originalArray[randomIndex],
-      originalArray[currentIndex],
-    ];
+    while (currentIndex > 0) {
+      randomIndex = ~~(random() * originalArray.length);
+      currentIndex--;
+      [originalArray[currentIndex], originalArray[randomIndex]] = [
+        originalArray[randomIndex],
+        originalArray[currentIndex],
+      ];
+    }
   }
-
   return originalArray;
 }
 
