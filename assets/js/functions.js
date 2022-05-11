@@ -115,3 +115,13 @@ function shuffleArray(originalArray) {
 
   return originalArray;
 }
+
+function empty(target) {
+  if (!type(target, 'element', true)) {
+    target = $(target);
+  }
+
+  while (target.firstChild) {
+    target.removeChild(target.firstChild);
+  }
+}

@@ -1,10 +1,11 @@
-const version = 122231;
+const version = 2122231;
 const cacheSlug = 'spygame';
 const assets = [
   '/',
   '/index.html',
   '/assets/images/menu.svg',
   '/assets/images/logo.svg',
+  '/assets/images/x.svg',
   '/assets/css/style.css',
   '/assets/js/app.js',
   '/assets/js/eventListeners.js',

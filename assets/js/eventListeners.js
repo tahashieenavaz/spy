@@ -1,4 +1,5 @@
 $('#settings .buttons .submit').onclick = async () => {
+  const gameContentElement = $('#game .grow');
   const numberOfPlayers = Number($('#playerCount').value);
   const numberOfSpies = Number($('#spyCount').value);
 
@@ -42,18 +43,16 @@ $('#settings .buttons .submit').onclick = async () => {
       }
 
       if (revealedCards >= playerStack.length) {
-        while ($('#game .grow').firstChild) {
-          $('#game .grow').removeChild($('#game .grow').firstChild);
-        }
+        empty(gameContentElement);
 
         const timerElement = document.createElement('div');
         timerElement.classList.add('timer');
-        $('#game .grow').appendChild(timerElement);
+        gameContentElement.appendChild(timerElement);
 
         const distance = 1 * 60000;
         const future = new Date(new Date().getTime() + distance);
 
-        let timerInterval = setInterval(() => {
+        timerInterval = setInterval(() => {
           const currentDistance = future - new Date().getTime();
           let minutes = Math.floor(
             (currentDistance % (1000 * 60 * 60)) / (1000 * 60)
@@ -65,14 +64,13 @@ $('#settings .buttons .submit').onclick = async () => {
           timerElement.innerHTML = `${minutes}:${seconds}`;
           if (minutes == 0 && seconds <= 0) {
             clearInterval(timerInterval);
-            navigator.vibrate(200);
           }
         });
       }
     };
     playerButtonsFragment.appendChild(playerButtonElement);
   });
-  $('#game .grow').appendChild(playerButtonsFragment);
+  gameContentElement.appendChild(playerButtonsFragment);
 
   page('game');
 };
@@ -83,3 +81,22 @@ $('#settings .buttons .reset').onclick = () => {
 
   return true;
 };
+
+$$('nav button').forEach((navButton) => {
+  navButton.addEventListener('click', (e) => {
+    $('.left-menu').classList.toggle('open');
+    let targetImage = null;
+    if (e.currentTarget.querySelector('img').src.match('x.svg')) {
+      targetImage = '/assets/images/menu.svg';
+    } else {
+      targetImage = '/assets/images/x.svg';
+    }
+    e.currentTarget.querySelector('img').src = targetImage;
+  });
+});
+
+$('#newgame').addEventListener('click', (e) => {
+  e.preventDefault();
+  empty('#game');
+  page('settings');
+});

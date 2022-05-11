@@ -10,3 +10,5 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 const { log } = console;
 const info = log;
+
+let timerInterval = null;
