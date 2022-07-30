@@ -133,7 +133,7 @@ function empty(target) {
  */
 function closeMenu() {
   $$('nav img').forEach((navImage) => {
-    navImage.src = '/assets/images/menu.svg';
+    navImage.src = 'assets/images/menu.svg';
   });
   removeClass('.left-menu', 'open');
 }
@@ -143,7 +143,7 @@ function closeMenu() {
  */
 function openMenu() {
   $$('nav img').forEach((navImage) => {
-    navImage.src = '/assets/images/x.svg';
+    navImage.src = 'assets/images/x.svg';
   });
 
   addClass('.left-menu', 'open');

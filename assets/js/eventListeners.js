@@ -86,9 +86,9 @@ $$('nav button').forEach((navButton) => {
     $('.left-menu').classList.toggle('open');
     let targetImage = null;
     if (e.currentTarget.querySelector('img').src.match('x.svg')) {
-      targetImage = '/assets/images/menu.svg';
+      targetImage = 'assets/images/menu.svg';
     } else {
-      targetImage = '/assets/images/x.svg';
+      targetImage = 'assets/images/x.svg';
     }
     e.currentTarget.querySelector('img').src = targetImage;
   });
