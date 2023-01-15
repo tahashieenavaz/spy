@@ -1,0 +1,194 @@
+:root {
+  --blue: #00297a;
+  --top-padding: 85px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+section {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: 300ms;
+}
+section.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+  color: #fff;
+}
+.center {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-weight: 100;
+}
+h1,
+h2 {
+  text-align: center;
+}
+button {
+  all: unset;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+#home img {
+  pointer-events: none;
+  user-select: none;
+}
+#home button {
+  background: #fff;
+  color: #222;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 50%;
+  text-align: center;
+  margin-inline: auto;
+  display: block;
+}
+
+img {
+  width: 300px;
+}
+.grow {
+  flex: 1;
+}
+#home {
+  background: var(--blue);
+}
+#settings,
+#game {
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--top-padding);
+  padding-bottom: 30px;
+  overflow-y: scroll;
+}
+:is(#game, #settings) nav {
+  z-index: 1000;
+  background: var(--blue);
+  flex-basis: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 1.4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+:is(#game, #settings) nav h1 {
+  font-size: 2rem;
+}
+:is(#game, #settings) nav img {
+  width: 50px;
+}
+:is(#game, #settings) nav button {
+  transition: 100ms;
+  padding: 0;
+}
+:is(#game, #settings) nav button:active {
+  background: rgba(255, 255, 255, 0.5);
+}
+#settings .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+#settings .buttons button {
+  width: 46%;
+  text-align: center;
+}
+#settings .buttons button.submit {
+  background: var(--blue);
+}
+#settings .buttons button.reset {
+  background: #ececec;
+  color: #222;
+}
+input {
+  all: unset;
+  box-sizing: border-box;
+  background: #f1f1f1;
+  border-radius: 6px;
+  padding: 1.3ch 1.5ch;
+  color: #222;
+}
+.form-control span {
+  color: #222;
+  font-weight: 100;
+  font-size: 0.8rem;
+  display: block;
+  margin-block-end: 0.5rem;
+}
+
+#game .grow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 1.4rem;
+}
+
+#game .grow button {
+  background: var(--blue);
+}
+#game .grow button[disabled] {
+  opacity: 0.5;
+}
+
+.timer {
+  color: #222;
+  grid-column: span 2;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.left-menu {
+  width: 60%;
+  background: var(--blue);
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  transform: translateX(100%);
+  transition: 300ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.3rem;
+  padding-top: var(--top-padding);
+  text-transform: uppercase;
+  gap: 2rem;
+}
+.left-menu.open {
+  transform: translateX(0);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Spy" />
+    <meta name="apple-mobile-web-app-title" content="Spy" />
+    <meta name="msapplication-starturl" content="/index.html" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="assets/css/style.css?v=2" />
+
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>Spy</title>
+  </head>
+  <body>
+    <section id="home" class="page active center">
+      <img src="assets/images/logo.svg" alt="" />
+      <div>
+        <h1>S.P.Y</h1>
+        <h2>Divide & Rule</h2>
+      </div>
+      <div>
+        <button onclick="page('settings')">Start</button>
+      </div>
+    </section>
+    <section id="settings">
+      <nav>
+        <h1>SPY</h1>
+        <button draggable="false">
+          <img src="assets/images/menu.svg" alt="" />
+        </button>
+      </nav>
+      <div class="grow center">
+        <div class="form-control">
+          <span>Number of Players</span>
+          <input type="number" id="playerCount" value="10" min="3" />
+        </div>
+        <div class="form-control">
+          <span>Number of Spies</span>
+          <input type="number" id="spyCount" value="3" min="1" />
+        </div>
+        <div class="buttons">
+          <button class="submit">Fire up!</button>
+          <button class="reset">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="game">
+      <nav>
+        <h1>SPY</h1>
+        <button draggable="false">
+          <img src="assets/images/menu.svg" alt="" />
+        </button>
+      </nav>
+
+      <div class="grow center"></div>
+    </section>
+
+    <div class="left-menu">
+      <a id="newgame" href="#">New Game</a>
+      <a href="#">Score Board</a>
+    </div>
+
+    <script src="assets/js/app.js?v=3"></script>
+    <script src="assets/js/functions.js?v=21"></script>
+    <script src="assets/js/eventListeners.js?v=2"></script>
+  </body>
+</html>
